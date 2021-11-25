@@ -1,0 +1,244 @@
+.home-product--item {
+    display: block;
+    background-color: var(--white-color);
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+    transition: transform linear .2s;
+    will-change: transform;
+    text-decoration: none;
+}
+
+.home-product--item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .05);
+}
+
+.home-product--image {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.home-sale--inMonth {
+    position: absolute;
+    bottom: 128px;
+}
+
+.home-sale--inMonth img {
+    width: 100%;
+    position: relative;
+    bottom: 14px;
+}
+
+.home-product--letter {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .87);
+    line-height: 1.7rem; 
+    margin: 10px;
+    height: 3.4rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+
+.home-price--product {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-price--old {
+    display: flex;
+    font-size: 1.3rem;
+    margin: 0 7px 0 10px;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, .6);
+}
+
+.home-price--latest {
+    display: flex;
+}
+
+.home-price--old .home-price--money {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, .6)
+}
+
+.home-price--old .home-price--currency {
+    position: relative;
+    color: rgba(0, 0, 0, .6);
+    font-size: 0.9rem;
+    top: -2px;
+}
+
+.home-price--latest .home-price--currency {
+    position: relative;
+    color: red; 
+    font-size: 0.9rem;
+}
+
+.home-price--currency:after{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 4px;
+    border-bottom: 1px solid red;  
+}
+
+.home-price--old .home-price--currency:after{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 1.3px;
+    width: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, .6);  
+}
+
+.home-price--money {
+    font-size: 1.6rem;
+    color: red;
+}
+
+.home-info--middle {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 5px 10px;
+}
+
+.home-action--loved .home-icon--loved {
+    display: inline-block;
+}
+
+.home-action--loved .home-icon--love {
+    display: none;
+}
+
+.home-icon--loved {
+    display: none;
+}
+
+.home-icon--love {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, .3);
+}
+
+
+i.home-icon--loved {
+    font-size: 1.3rem;
+    color: red;
+    display: none;
+}
+
+.home-rating {
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    top: 2.5px;
+}
+
+.home-rating i {
+    color: var(--star-gold);
+    font-size: 0.8rem;
+}
+
+.home-sold--product {
+    font-size: 1.2rem;
+    margin-left: 6px;
+    color: var(--black-color);
+}
+
+.home-source {
+    display: flex;
+}
+
+.home-source--origin {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .6);
+    margin: 20px 10px 10px auto;
+}
+.home-favorite {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    align-items: flex-end;
+    left: -4px;
+    color: rgb(208, 1, 27);
+    background-color: currentColor;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.home-favorite--color {
+    display: flex;
+    position: relative;
+}
+
+.home-favorite--color::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top:  3px solid currentColor;
+    border-left:  3px solid transparent;
+    filter: brightness(60%);
+}
+
+.home-mall {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 0.8rem;
+    width: 2.2rem;
+    top: -300px;
+    margin: 3.5px 2px;
+    background-position: center;
+}
+
+.home-saleOff {
+    position: absolute;
+    width: 40px;
+    height: 32px;
+    right: 0;
+    top: 0;
+    background-color: var(--saleOff-color);
+    text-align: center;
+}
+
+.home-saleOff::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-width: 0 20px 5px;
+    border-color: transparent var(--saleOff-color) transparent var(--saleOff-color);
+    border-style: solid;
+    bottom: -5px;
+}
+
+.home-saleOff--percent {
+    font-size: 1.2rem;
+    color: #ee4d2d;
+    box-sizing: inherit;
+    line-height: 1.2rem;
+    position: relative;
+    top: 2px;
+}
+
+.home-saleOff--product {
+    font-size: 1.2rem;
+    color: var(--white-color);
+    box-sizing: inherit;
+    text-transform: uppercase;
+    line-height: 1.2rem;
+    position: relative;
+    top: -1px;
+}
+
+
+
